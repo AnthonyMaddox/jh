@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/AnthonyMaddox/jhome#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "nodemailer": "^6.5.0",
     "password-generator": "^2.3.2"
   }
 }
