@@ -9,7 +9,44 @@ const app = express();
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, "jhome/build")));
+app.use(cors());
+app.use(express.json());
+app.use("/", router);
+const contactEmail = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "makbasementremodeling@gmail.com",
+    pass: "makbasement21",
+  },
+});
 
+contactEmail.verify((error) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("Ready to Send");
+  }
+});
+router.post("/contact", (req, res) => {
+  const name = req.body.name;
+  const email = req.body.email;
+  const message = req.body.message;
+  const mail = {
+    from: name,
+    to: "makbasementremodeling@gmail.com",
+    subject: "Contact Form Submission",
+    html: `<p>Name: ${name}</p>
+             <p>Email: ${email}</p>
+             <p>Message: ${message}</p>`,
+  };
+  contactEmail.sendMail(mail, (error) => {
+    if (error) {
+      res.json({ status: "ERROR" });
+    } else {
+      res.json({ status: "Message Sent" });
+    }
+  });
+});
 // Put all API endpoints under '/api'
 app.get("/api/passwords", (req, res) => {
   const count = 5;

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import ContactForm from "./ContactForm";
 
 class App extends Component {
   // Initialize state
@@ -22,6 +23,7 @@ class App extends Component {
 
     return (
       <div className="App">
+        <ContactForm />
         {/* Render the passwords if we have them */}
         {passwords.length ? (
           <div>
