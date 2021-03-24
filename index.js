@@ -12,6 +12,7 @@ app.use(express.static(path.join(__dirname, "jhome/build")));
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
+
 const contactEmail = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -27,7 +28,7 @@ contactEmail.verify((error) => {
     console.log("Ready to Send");
   }
 });
-router.post("/contact", (req, res) => {
+router.post("/api/contact", (req, res) => {
   const name = req.body.name;
   const email = req.body.email;
   const message = req.body.message;
