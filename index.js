@@ -2,15 +2,12 @@ const express = require("express");
 const path = require("path");
 const generatePassword = require("password-generator");
 const express = require("express");
-const router = express.Router();
-const cors = require("cors");
-const nodemailer = require("nodemailer");
+
 const app = express();
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, "jhome/build")));
-// app.use(cors());
-// app.use(express.json());
+
 // Put all API endpoints under '/api'
 app.get("/api/passwords", (req, res) => {
   const count = 5;
