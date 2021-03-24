@@ -1,7 +1,9 @@
 const express = require("express");
 const path = require("path");
 const generatePassword = require("password-generator");
-const express = require("express");
+const router = express.Router();
+const cors = require("cors");
+const nodemailer = require("nodemailer");
 
 const app = express();
 
