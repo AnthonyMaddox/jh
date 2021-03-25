@@ -23,6 +23,7 @@ class App extends Component {
 
     return (
       <div className="App">
+          <h1>Jerry Homeowner Handyman Services</h1>
         <ContactForm />
         {/* Render the passwords if we have them */}
         
