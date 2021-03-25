@@ -4,29 +4,28 @@ import ContactForm from "./ContactForm";
 
 class App extends Component {
   // Initialize state
-//   state = { passwords: [] };
+  //   state = { passwords: [] };
 
-//   // Fetch passwords after first mount
-//   componentDidMount() {
-//     this.getPasswords();
-//   }
+  //   // Fetch passwords after first mount
+  //   componentDidMount() {
+  //     this.getPasswords();
+  //   }
 
-//   getPasswords = () => {
-//     // Get the passwords and store them in state
-//     fetch("/api/passwords")
-//       .then((res) => res.json())
-//       .then((passwords) => this.setState({ passwords }));
-//   };
+  //   getPasswords = () => {
+  //     // Get the passwords and store them in state
+  //     fetch("/api/passwords")
+  //       .then((res) => res.json())
+  //       .then((passwords) => this.setState({ passwords }));
+  //   };
 
   render() {
     // const { passwords } = this.state;
 
     return (
       <div className="App">
-          <h1>Jerry Homeowner Handyman Services</h1>
+        <h1>Jerry Homeowner Handyman Services</h1>
         <ContactForm />
         {/* Render the passwords if we have them */}
-        
       </div>
     );
   }
