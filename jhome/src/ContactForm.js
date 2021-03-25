@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import ImageUp from "./ImageUp";
 const ContactForm = () => {
   const [status, setStatus] = useState("Submit");
   const handleSubmit = async (e) => {
@@ -39,7 +38,6 @@ const ContactForm = () => {
         <label htmlFor="message">Message:</label>
         <textarea id="message" required />
       </div>
-      <div>{/* <ImageUp /> */}</div>
       <button type="submit">{status}</button>
     </form>
   );
