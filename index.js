@@ -18,8 +18,8 @@ const contactEmail = nodemailer.createTransport({
   port: 465,
   host: "smtp.gmail.com",
   auth: {
-    user: "makbasementremodeling@gmail.com",
-    pass: "makbasement21",
+    user: "jerryhomeowner@gmail.com",
+    pass: "jHomeHandy21",
   },
 });
 
@@ -36,7 +36,7 @@ router.post("/api/contact", (req, res) => {
   const message = req.body.message;
   const mail = {
     from: name,
-    to: "makbasementremodeling@gmail.com",
+    to: "jerryhomeowner@gmail.com",
     subject: "Contact Form Submission",
     html: `<p>Name: ${name}</p>
              <p>Email: ${email}</p>
@@ -74,4 +74,4 @@ router.post("/api/contact", (req, res) => {
 const port = process.env.PORT || 5000;
 app.listen(port);
 
-console.log(`Password generator listening on ${port}`);
+console.log(`listening on ${port}`);
