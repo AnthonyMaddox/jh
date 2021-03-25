@@ -1,6 +1,7 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 const path = require("path");
-const generatePassword = require("password-generator");
+// const generatePassword = require("password-generator");
 const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
@@ -14,7 +15,8 @@ app.use(express.json());
 app.use("/", router);
 
 const contactEmail = nodemailer.createTransport({
-  service: "gmail",
+  port: 465,
+  host: "smtp.gmail.com",
   auth: {
     user: "makbasementremodeling@gmail.com",
     pass: "makbasement21",

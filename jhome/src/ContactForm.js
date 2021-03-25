@@ -11,13 +11,16 @@ const ContactForm = () => {
       email: email.value,
       message: message.value,
     };
-    let response = await fetch("https://secure-savannah-57807.herokuapp.com/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(details),
-    });
+    let response = await fetch(
+      "https://secure-savannah-57807.herokuapp.com/api/contact",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify(details),
+      }
+    );
     setStatus("Submit");
     let result = await response.json();
     alert(result.status);
