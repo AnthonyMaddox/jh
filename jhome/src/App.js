@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import "./App.css";
+import { Route, Link, Redirect } from "react-router-dom";
 import ContactForm from "./ContactForm";
+import Nav from "./Components/Nav";
+import Foot from "./Components/Foot";
+import Home from "./Components/Home";
+import About from "./Components/About";
 
 class App extends Component {
   // Initialize state
@@ -23,8 +28,15 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>Jerry Homeowner Handyman Services</h1>
-        <ContactForm />
+        <Nav />
+        <div className="mainBody">
+          <h1>Jerry Homeowner Handyman Services</h1>
+          <Route path="/" exact render={() => <Redirect to="/home" />} />
+          <Route path="/home" component={Home} exact={true} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={ContactForm} />
+        </div>
+        <Foot />
       </div>
     );
   }

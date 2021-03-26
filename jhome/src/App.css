@@ -1,14 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Stick&display=swap");
+
 .App {
   text-align: center;
   font-family: "Courier New", monospace;
-  width: 100%;
+  width: auto;
+  background-color: grey;
+  font-family: "Syne Mono", monospace;
+}
+.mainBody {
+  padding-top: 100px;
+  padding-bottom: 10rem;
+  height: 45vh;
+}
+.footerDiv {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 10rem;
+  display: flex;
+  justify-content: space-around;
 }
 
 h1 {
   font-weight: normal;
   font-size: 42px;
 }
-
+.nav-brand {
+  font-family: "Stick", sans-serif;
+  color: tan;
+}
+/* 
 .passwords {
   list-style: none;
   padding: 0;
@@ -28,4 +50,4 @@ h1 {
 }
 .more:active {
   background-color: #ffefa9;
-}
+} */
