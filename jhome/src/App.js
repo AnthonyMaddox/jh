@@ -30,7 +30,7 @@ class App extends Component {
       <div className="App">
         <Nav />
         <div className="mainBody">
-          <h1>Jerry Homeowner Handyman Services</h1>
+          <h1>Forget Harry. I want Jerry!</h1>
           <Route path="/" exact render={() => <Redirect to="/home" />} />
           <Route path="/home" component={Home} exact={true} />
           <Route path="/about" component={About} />

@@ -61,23 +61,23 @@ class Foot extends Component {
       },
     ];
     return (
-      <SimpleReactFooter
-        className="footerDiv"
-        description={description}
-        title={title}
-        columns={columns}
-        linkedin="fluffy_cat_on_linkedin"
-        facebook="fluffy_cat_on_fb"
-        twitter="fluffy_cat_on_twitter"
-        instagram="fluffy_cat_live"
-        youtube="UCFt6TSF464J8K82xeA?"
-        pinterest="fluffy_cats_collections"
-        copyright="Jerry Homeowner"
-        iconColor="black"
-        backgroundColor="tan"
-        fontColor="black"
-        copyrightColor="darkgrey"
-      />
+        <SimpleReactFooter
+          className="footerDiv"
+          description={description}
+          title={title}
+          columns={columns}
+          linkedin="fluffy_cat_on_linkedin"
+          facebook="fluffy_cat_on_fb"
+          twitter="fluffy_cat_on_twitter"
+          instagram="fluffy_cat_live"
+          youtube="UCFt6TSF464J8K82xeA?"
+          pinterest="fluffy_cats_collections"
+          copyright="Jerry Homeowner"
+          iconColor="black"
+          backgroundColor="tan"
+          fontColor="black"
+          copyrightColor="darkgrey"
+        />
     );
   }
 }
